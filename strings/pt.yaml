@@ -1,0 +1,262 @@
+# coloque as pessoas que trabalharam na tradução aqui, se quiserem
+authors:
+  - "@burunnov"
+# coloque o nome do seu idioma aqui, na tradução nativa
+language: "Português"
+# enviado quando o bot é adicionado a um grupo
+greeting: "Olá! Eu sou o bot Camaleão, um bot do Telegram que traz o jogo The Chameleon para o seu grupo! Para alterar minhas configurações, você pode usar /settings (restrito a administradores em grupos maiores). Ou apenas toque em /start para começar um jogo comigo :)"
+# quando um jogo é iniciado com /start em um grupo.
+# {0} menção do jogador que iniciou o jogo, {1} lista de menções dos jogadores que entraram, {2-8} configurações, seja o nome do baralho ou ativar/desativar (veja abaixo)
+start_game: "{0} iniciou um jogo. Você está jogando com as seguintes configurações:\n\n<b>Baralho:</b> {2}\n<b>Menos:</b> {3}\n<b>Mais:</b> {4}\n<b>Fixar:</b> {5}\n<b>Torneio:</b> {6}\n<b>Restrição:</b> {7}\n<b>Exclamação:</b> {8}\n\nVamos participar!\n\n#Jogadores:\n{1}"
+# o botão abaixo da mensagem acima
+start_button: "Entrar/Sair"
+# se a configuração acima estiver ativada
+activated: "Ativado"
+# se a configuração acima estiver desativada
+deactivated: "Desativado"
+# pop-up que o jogador recebe ao pressionar o botão acima
+player_joins_query: "Você entrou no jogo!"
+player_leaves_query: "Você saiu do jogo!"
+# pop-up se o jogador apertar o botão acima, mas nenhum jogo está em andamento
+join_no_game_running: "Desculpe, de alguma forma este botão está aqui quando não deveria. Por favor, use /start para iniciar um jogo."
+# texto aparecendo no grupo quando um jogador entra/sai e o tempo se esgota
+# {0} menção dos jogadores
+player_joins_text: "{0} entrou no jogo. "
+player_leaves_text: "{0} saiu do jogo. "
+# texto adicional ao acima
+# {0} se mais de três jogadores, inicia daqui; caso contrário, falha
+player_action_text: "Se ninguém entrar ou sair em 30 segundos, o tempo se esgota e o jogo {0}"
+# veja acima
+start: "começa :)"
+fail: "falha :("
+# mensagem quando alguém aperta /start enquanto um jogo está em andamento
+game_running: "Um jogo já está em andamento, por favor, espere até que termine."
+# mensagem quando um jogo falha (tempo de 30 segundos se esgota e não entram três pessoas)
+game_failed: "Não há jogadores suficientes, desculpe."
+# mensagem quando um jogo começa
+# {0} tópico/chave do dicionário, {1} lista de palavras
+game_succeed: "O jogo começou!\n<b>Tópico:</b>\n{0}\n<b>Palavras:</b>\n{1}"
+# botão abaixo da mensagem acima
+play_button: "Mostrar a palavra secreta"
+# pop-up que o camaleão recebe ao apertar o botão acima
+player_is_chameleon: "Você é o Camaleão. Boa sorte!"
+# pop-up que o jogador comum recebe ao apertar o botão acima
+# {0} palavra secreta
+secret_word: "A palavra secreta é {0}"
+# pop-up se o jogador apertar o botão acima e o jogo não estiver em andamento
+wrong_game: "Desculpe, seu jogo atual parece ser diferente deste. Por favor, encontre a última mensagem minha com este(s) botão(ões) e pressione lá :)"
+# mensagem aparecendo depois da acima, pedindo a primeira palavra
+# {0} menção do jogador
+first_player_say_word: "{0}, você é o primeiro a me dar uma palavra. Por favor, faça isso."
+# mensagem pedindo para cada jogador enviar uma palavra, um de cada vez
+# {0} menção do jogador, {1} lista de palavras no formato nome do jogador: palavra(s), {2} mensagem abaixo ou nada
+more_players_say_word: "Obrigado. Agora é a sua vez, {0}.{2}\n\nLista de palavras atual:\n{1}"
+# isso será anexado às duas mensagens acima se o jogo não estiver no modo restrito
+exclamation_deactivated: "Para continuar sua conversa, adicione ! no início da sua mensagem. Eu não contarei isso como sua resposta."
+exclamation_activated: "Para enviar sua resposta, coloque ! na frente da sua mensagem. Qualquer outra mensagem será ignorada pelo bot, então você pode continuar a conversa normalmente."
+# mensagem antes da votação, mostrando a lista final de palavras
+# {0} lista final de palavras
+final_word_list: "Lista final de palavras, agora vamos votar para descobrir quem será revelado (Camaleão ou não):\n\n{0}"
+# mensagem pedindo para votar, botões com os nomes abaixo
+# {0} lista de votos, no formato menções dos jogadores: número de votos
+vote_list: "Lembre-se, você só pode votar uma vez e não pode corrigir seu voto.\nPessoas que ainda não votaram:\n\n{0}"
+# pop-up para voto registrado com sucesso
+voted: "Seu voto foi registrado :)"
+# pop-up para alguém tentando votar novamente
+already_voted: "Você já votou!"
+# pop-up para alguém apertando o próprio nome (não há suicídio aqui) durante a votação
+vote_yourself: "Você não pode votar em si mesmo!"
+# em caso de empate após todos votarem, o primeiro jogador que disse a palavra decide quem será revelado
+# {0} menção do jogador que começou (primeiro a falar a palavra)
+draw: "{0}, houve um empate. Como você teve a desvantagem de dizer a primeira palavra, você pode decidir quem será revelado."
+# se alguém que não começou (veja acima) apertar um dos botões
+not_starter: "Você não disse a primeira palavra, realmente achou que isso funcionaria? :("
+# se o camaleão não for encontrado
+# {0} jogador revelado, {1} camaleão, {2} palavra secreta
+chameleon_not_found: "{0} foi revelado e <b>não</b> é o Camaleão, {1} é! O Camaleão vence o jogo! A palavra secreta era <b>{2}</b>."
+# se o camaleão foi encontrado
+# {0} menção do camaleão
+chameleon_found: "{0} foi revelado e é o Camaleão! Agora você pode tentar adivinhar a palavra secreta."
+# se o camaleão foi encontrado e há apenas três jogadores (ativo na configuração)
+# {0} menção do camaleão
+chameleon_found_fewer: "{0} foi revelado e é o Camaleão! Como há apenas três jogadores agora, você tem duas tentativas (os administradores do grupo podem desativar isso nas configurações)."
+# se o camaleão foi encontrado e há 7 ou 8 jogadores
+# {0} menção do camaleão
+chameleon_found_more: "{0} foi revelado e é o Camaleão! Como há mais de seis jogadores, a lista de palavras não está visível, então preste atenção na ortografia! (os administradores do grupo podem desativar isso nas configurações)"
+# substitui a palavra/tópico da lista
+hidden: "oculta"
+# se o camaleão erra e tem uma segunda tentativa
+# {0} menção do camaleão
+chameleon_guess_wrong_fewer: "Desculpe {0}, essa tentativa estava errada. Tente novamente ;)"
+# se o camaleão erra
+# {0} menção do camaleão, {1} palavra secreta
+chameleon_guess_wrong: "Desculpe {0}, essa tentativa estava errada, <b>{1}</b> seria a correta. O Camaleão perde, os jogadores vencem!"
+# se o camaleão acerta
+# {0} menção do camaleão
+chameleon_guess_right: "Parabéns {0}, você acertou! O Camaleão vence, os jogadores perdem!"
+# se o camaleão erra, mas o corretor ortográfico corrige para a palavra certa
+# {0} menção do camaleão
+chameleon_guess_corrected: "Parabéns {0}, você acertou... bem, para ser honesto, na verdade não era a tentativa correta. Mas meu corretor interno ajustou para a certa. De qualquer forma, você venceu. Yayyy :)"
+# quando um partida termina, mas ainda não há vencedor, então outra rodada é iniciada
+tournament_end: "O jogo terminou, mas ainda não há vencedor da partida, então um novo começou. Pontos atuais da partida:\n{0}\n<b>Tópico:</b>\n{1}\n<b>Palavras:</b>\n{2}"
+# quando um partida termina e há apenas um vencedor
+# {0} menção do vencedor, {1} pontos do vencedor, {2} menções de outros jogadores + pontos
+tournament_end_one: "A partida terminou \\o/\n\nO vencedor é {0} com <b>{1}</b> pontos.\n\nOutros competidores:\n{2}"
+# quando um partida termina e há apenas um vencedor, e ninguém mais marcou pontos
+# {0} menção do vencedor, {1} pontos do vencedor, {2} menções de outros jogadores + pontos
+tournament_end_one_super_win: "A partida terminou \\o/\n\nO vencedor é {0} com <b>{1}</b> pontos, esmagando totalmente a concorrência! Todos os outros ficaram com zero pontos, veja esses perdedores:\n{2}"
+# quando um partida termina com vários vencedores
+# {0} menções dos vencedores + pontos, {1} menções de outros jogadores + pontos
+tournament_end_several: "A partida terminou \\o/\n\nOs vencedores são:\n{0}\n\nOutros competidores:\n{1}"
+# quando um admin interrompe um jogo em andamento ou prestes a começar
+abort_game: "Jogo interrompido com sucesso"
+# quando alguém tenta interromper um jogo que não está em andamento
+no_game_running: "Desculpe, você não pode interromper um jogo que não está em andamento"
+# quando um não admin tenta interromper um jogo em andamento ou prestes a começar
+no_admin_abort: "Você precisa ser administrador para interromper um jogo em andamento"
+# quando um desligamento é iniciado, esta mensagem é enviada aos jogadores ativos como aviso
+init_shutdown: "Desculpe pelo transtorno, mas vou desligar em 5 minutos. Isso significa que você perderá seu \"progresso\" se não terminar o jogo atual. Por favor, acesse @TheChameleon para mais informações."
+# quando o desligamento é iniciado e jogadores ainda estão jogando
+run_shutdown: "Os 5 minutos se passaram, lamento que vocês tenham perdido seu progresso :("
+# quando um desligamento é iniciado e jogadores querem iniciar um novo jogo
+group_start_shutdown: "Desculpe pelo transtorno, mas preciso desligar. Por favor, acesse @TheChameleon para mais informações."
+# quando um não admin tenta alterar configurações do grupo
+no_admin_settings: "Você precisa ser administrador para alterar as configurações do grupo. Se você é administrador e recebeu esta mensagem, use /admins_reload."
+# quando um recarregamento de cache é solicitado
+admins_reload: "A lista de administradores foi recarregada!"
+# quando um admin ainda não iniciou conversa privada com o bot
+no_pm_settings: "Você precisa iniciar uma conversa privada comigo para alterar as configurações do grupo. Basta pressionar o botão abaixo"
+# o botão mencionado acima
+no_pm_settings_button: "Iniciar"
+# quando um admin iniciou conversa privada, mas bloqueou o bot
+admin_blocked_bot: "Não consigo enviar mensagem privada, pois você me bloqueou. Por favor, desbloqueie-me e tente novamente."
+# mensagem de configuração de grupo enviada a admins em PM
+# {0} nome do grupo, link se o grupo tiver username
+group_setting_text: "Oi, você quer alterar as configurações de como eu funciono no grupo {0}, ótimo. Para saber mais sobre as configurações, use /settings_help. Você pode pressionar o botão de atualizar para recarregar essas configurações, caso ache que outro admin as tenha alterado."
+# botões para configurações de grupo. Apenas traduzir strings!
+group_setting_buttons:
+  refresh: "Atualizar"
+  language: "Idioma"
+  deck: "Baralho"
+  fewer: "Menos"
+  more: "Mais"
+  tournament: "Torneio"
+  pin: "Fixar"
+  exclamation: "Exclamação"
+  restrict: "Restrição"
+# mostrado ao usuário quando pressiona atualizar nas configurações
+group_setting_refresh: "As configurações foram atualizadas!"
+# alterar idioma do grupo
+# {0} idioma atual
+group_setting_languages: "O idioma atual do seu grupo é <b>{0}</b>. Selecione para qual deseja alterar.\n\nSe quiser traduzir um idioma ou reportar um erro de digitação, use /translation"
+# alterar baralho do grupo
+# {0} idioma atual
+group_setting_deck_language: "Selecione o baralho desejado. Comece pelo idioma em que ele deve estar escrito, <b>{0}</b> é o atual do grupo."
+# {0} baralho atual
+group_setting_decks: "O baralho atual do seu grupo é <b>{0}</b>. Selecione o que deseja mudar.\n\nSe quiser criar um baralho ou reportar um erro de digitação, use /deck"
+# ativar configuração "menos" do grupo
+group_setting_fewer_activate: "A configuração 'menos' está ativada!"
+# desativar configuração "menos" do grupo
+group_setting_fewer_deactivate: "A configuração 'menos' está desativada!"
+# ativar configuração "mais" do grupo
+group_setting_more_activate: "A configuração 'mais' está ativada!"
+# desativar configuração "mais" do grupo
+group_setting_more_deactivate: "A configuração 'mais' está desativada!"
+# ativar modo torneio do grupo
+group_setting_tournament_activate: "O modo torneio está ativado!"
+# desativar modo torneio do grupo
+group_setting_tournament_deactivate: "O modo torneio está desativado!"
+# ativar configuração de fixar mensagens do grupo
+group_setting_pin_activate: "A configuração 'fixar' está ativada!"
+# desativar configuração de fixar mensagens do grupo
+group_setting_pin_deactivate: "A configuração 'fixar' está desativada!"
+# ser admin com permissão para fixar é necessário
+group_setting_pin_required: "Preciso ser admin com permissão para fixar mensagens para ativar essa configuração"
+# ativar modo restrito do grupo
+group_setting_restrict_activate: "O modo restrito está ativado!"
+# desativar modo restrito do grupo
+group_setting_restrict_deactivate: "O modo restrito está desativado!"
+# ser admin com permissão para adicionar/promover/restringir é necessário
+group_setting_restrict_required: "Preciso ser admin com permissão para adicionar membros, promover admins e restringir membros para ativar este modo"
+# ativar configuração de exclamação do grupo
+group_setting_exclamation_activate: "Ativado, entradas com ! no início da mensagem são contadas."
+# desativar configuração de exclamação do grupo
+group_setting_exclamation_deactivate: "Desativado, entradas sem ! no início da mensagem são contadas."
+# se ocorrer um erro em algum lugar, avisamos o usuário
+error: "Oi. Lamento informar que ocorreu um erro ao tentar processar sua atualização. Meus desenvolvedores serão notificados."
+# se um usuário quiser mudar seu idioma
+# {0} idioma atual
+private_language: "Oi. Seu idioma atual é {0}, selecione o desejado nos botões abaixo :)"
+# se um usuário mudou seu idioma
+# {0} idioma selecionado
+private_language_selected: "Perfeito, {0} será usado a partir de agora!"
+# se um idiota aleatório apertar botões
+user_not_in_game: "Oi, você precisa estar no jogo para fazer isso. Talvez na próxima rodada?"
+# regras, apresentadas quando alguém ainda não jogou ou usa /game_rules
+# regras do jogo
+rules: "<b>Camaleão - o jogo</b> <i>(regras em português, adaptadas para o bot do Telegram)</i>\n\n
+• Após o início do jogo, um jogador será o camaleão, os demais serão jogadores comuns\n
+• Um tema e uma lista de palavras relacionadas são apresentados, com um botão anexado\n
+• Se você for um jogador e pressionar este botão, uma das palavras da lista será apresentada a você (chamada de palavra secreta) - todos recebem a mesma palavra, claro. Se você for o camaleão, será informado sobre isso\n
+• Agora o bot pedirá, um por vez, uma descrição da palavra secreta.\n
+• Se você for um jogador, tente descrever a palavra secreta de forma que o camaleão não consiga adivinhar; mas outros jogadores saberão com certeza que você não é o camaleão\n
+• Se você for o camaleão, terá que escolher uma descrição com base no seu conhecimento limitado. Tente se misturar!\n • Após todos descreverem suas palavras, todos votarão em quem acham que é o camaleão. O papel do jogador com mais votos será revelado\n 
+• Se for um jogador comum, o camaleão vence!\n • Se for o camaleão, ele tentará adivinhar a palavra secreta. Se acertar, ainda vence; caso contrário, os jogadores vencem!"
+# introdução quando há um novo jogador, precede as regras
+rules_prepend: "Oi, temos novos jogador(es). O jogo começará em 30 segundos, deixe-me apresentar rapidamente as regras para o(s) novo(s):\n\n"
+# usado nas strings abaixo
+here: "aqui"
+# resposta do comando deck
+# {0} e {1} serão links, ao invés da URL será usada a tradução de here. Avise o grupo se houver problema
+deck: "Decks são coleções de \"cartas\". Você pode criar novos decks ou alterar existentes. Eles são arquivos json simples. Ao criar um novo deck, você precisa passar duas chaves: language e name. Language é o idioma do deck, name é o nome do seu deck. Capitalize ambas. Dentro do arquivo json, você define chaves que são os tópicos das palavras, e cria uma lista com palavras correspondentes. Apenas strings são permitidas na lista. 16 palavras por tópico são recomendadas, mas não obrigatórias. Você pode conferir implementações reais {0} e participar {1} caso tenha dúvidas ou queira enviar um arquivo."
+# resposta do comando tradução
+# {0} - {2} serão links, ao invés da URL será usada a tradução de here. Avise o grupo se houver problema
+translation: "Você pode traduzir o bot inteiro :O Os arquivos são .yaml e podem ser abertos em qualquer editor de texto básico, mas recomendo Notepad ++ :) Se aceitar o desafio, você pode encontrar traduções existentes {0}. Após baixar o arquivo base (recomenda-se en, pois sempre está atualizado), renomeie-o com o código ISO 639-1 do seu idioma. Recomenda-se o código de duas letras, mas não é obrigatório. Traduza apenas o conteúdo entre aspas. Se precisar usar aspas na sua tradução, escape assim: <code>\\\"</code>. Deixe as chaves intactas e não altere sua quantidade. O formato do Telegram com tags html é suportado, como descrito {1}. Ao finalizar, participe {2} para enviar o arquivo ou tirar dúvidas."
+# se o ID do grupo não for conhecido. Pode acontecer se alguém obscurecer o comando /start ou se o ID mudar enquanto o bot estiver offline
+group_not_found: "Oi, desculpe, não consigo encontrar seu grupo no meu banco de dados. Ou você está brincando, ou fui offline. Nesse caso, execute /settings no chat do grupo novamente :)"
+# mensagem de início em privado
+greeting_private: "Oi, eu sou o Bot Camaleão :) Você pode jogar Camaleão comigo, basta me adicionar ao seu grupo. Se quiser mudar o idioma que uso no privado, use /language. E não se esqueça de sorrir. Pelo menos uma vez de vez em quando."
+# mensagem de ajuda em grupo
+help_group: "Oi, quer ajuda? Ótimo. Basicamente, só há três comandos que você poderá precisar em grupos:\n/start - iniciar um jogo\n/settings - [apenas admins em grupos grandes] alterar minhas configurações no grupo\n/nextgame - adiciona (ou remove) você da lista de próximo jogo deste grupo. Se estiver nela, eu notificarei quando um jogo começar\n\nAlém disso, também respondo a esses comandos:\n/abort_game - [apenas admins em grupos grandes] aborta um jogo em andamento\n/admins_reload - como os admins ficam em cache por uma hora, use caso o bot não te reconheça como admin ou se não deveria mais fazê-lo :O\n/id - mostra o ID do grupo\n\nSe precisar de ajuda humana, entre em @TheChameleonSupport. Teremos prazer em ajudar."
+# mensagem de ajuda em privado
+help_private: "Oi, quer ajuda? Ótimo. Respondo aos seguintes comandos no privado:\n/language - mudar o idioma que falo no chat privado\n/settings_help - ajuda a entender as configurações do grupo\n/translation - mostra como fazer traduções\n/deck - ensina a adicionar seu próprio deck\n\nSe precisar de ajuda humana, entre em @TheChameleonSupport. Teremos prazer em ajudar."
+# mensagem enviada em privado quando um novo jogo começa e a pessoa está na lista de próximo jogo
+# {0} nome do grupo
+nextgame: "Oi. Um novo jogo começou em {0} e tenho certeza de que eles adorariam que você participasse da diversão."
+# mensagem enviada em privado ao usar /nextgame e não estava na lista antes
+# {0} nome do grupo
+nextgame_added: "Oi. Você foi adicionado à lista de próximo jogo do grupo {0}, notificarei quando um novo jogo começar. Assim que participar de um jogo bem-sucedido, será removido da lista (para não te spamar :). Se quiser se remover, use /nextgame novamente no grupo, eu removo você."
+# mensagem enviada em privado ao usar /nextgame e já estava na lista
+# {0} nome do grupo
+nextgame_removed: "Você foi removido da lista de próximo jogo do chat {0}"
+# mensagem enviada no grupo quando usam /nextgame e não iniciaram o bot no privado
+nextgame_pm: "Oi. Para usar esse comando, você precisa iniciar o bot em privado. Pressione o botão abaixo."
+# mensagem enviada no grupo quando usam /nextgame e bloquearam o bot
+nextgame_block: "Ei. Se quiser que eu envie mensagens privadas, não deveria ter me bloqueado. Desbloqueie e tente novamente..."
+# mensagem enviada ao usar /settings_help
+settings_help: "Oi, como há várias configurações para um grupo, elas estão divididas. Use os botões abaixo para navegar."
+# explicações das configurações
+language_help: "<b>Idioma</b>: Altera o idioma que uso no seu grupo. Para saber como adicionar um idioma próprio, use /translation"
+deck_help: "<b>Deck</b>: Deck de cartas que uso no grupo. Normalmente contém 16 palavras de um mesmo tema. Escolho aleatoriamente um tema e dele a palavra secreta para a rodada. Você pode adicionar seus próprios decks com /deck"
+fewer_help: "<b>Menos</b>: Se apenas três jogadores estiverem jogando (e a opção estiver ativada), o camaleão, se pego, tem duas tentativas"
+more_help: "<b>Mais</b>: Se 7 ou 8 jogadores estiverem jogando (e ativado), as palavras desaparecem após todos dizerem suas palavras, dificultando para o camaleão adivinhar"
+tournament_help: "<b>Torneio</b>: Se ativado, um sistema de pontuação é introduzido. Se o camaleão escapar, ganha dois pontos. Se for pego e adivinhar a palavra, ganha um ponto. Caso contrário, os jogadores recebem dois pontos cada. O primeiro a chegar a 5 pontos vence."
+pin_help: "<b>Fixar</b>: Ao ativar, fixo silenciosamente a lista de palavras para facilitar o acesso. Refixo a mensagem antiga ao terminar o jogo. Para ativar, preciso ser admin com permissão de fixar."
+restrict_help: "<b>Restringir</b>: Ao ativar, restrinjo a escrita de todos, exceto de quem está na vez de falar a palavra. Todos voltam a escrever após a fase. Para funcionar, preciso ser admin com permissões de adicionar membros, restringir e adicionar admins. As permissões originais são restauradas ao final. Saiba mais: https://t.me/TheChameleonSupport/8\n<i>Atenção:</i> Cada mensagem conta como palavra na fase de dizer a palavra. A opção exclamação é ignorada."
+exclamation_help: "<b>Ponto de Exclamação</b>: Essencial para a contagem de entradas no jogo. Padrão: desativado, mensagens sem ! são contadas, mensagens com ! são ignoradas. Ativado: apenas mensagens com ! são contadas. Ignorado em modo restrito, onde não é possível conversar durante a fase de entradas."
+# strings de estatísticas
+# título do resultado
+private_stats_title: "Veja suas estatísticas"
+# descrição
+private_stats_description: "Apenas pressione. Não importa o que digite"
+# mensagem ao pressionar o resultado
+private_stats_text: "<b>Estatísticas de {0}</b>\n\nJogos jogados: {1} ({11}º de {17} jogadores)\nJogos vencidos: {2} ({3}% de todos os jogos)\nJogos perdidos: {4}\nPrimeiro jogador: {5} ({6}% dos jogos)\n\nTorneios jogados: {12} ({18}º lugar)\nTorneios vencidos: {13} ({14}% de todos os torneios)\nTorneios perdidos: {15}\n\nFoi camaleão: {7} ({8}% dos jogos)\nVenceu como camaleão: {9} ({10}% das vezes como camaleão, {16}% das vitórias gerais)"
+# para jogadores antes de 4 de fevereiro, quando camaleão vencido foi introduzido
+private_old_stats: "\n\nP.S.: Você jogou antes de 4 de fevereiro de 2020, então suas estatísticas podem diferir. Execute /stats no privado para saber mais."
+# botão sob o resultado inline
+private_old_button: "/stats"
+# para o comando /stats
+private_old_stats_command: "\n\n\nVocê joga este jogo há muito tempo, pelo menos antes de 4 de fevereiro de 2020. Seus números reais são um pouco maiores que mostrados acima. Isso aconteceu porque a estatística de venceu como camaleão foi adicionada nessa data, mantendo o restante das estatísticas inalteradas. Mas os dados antigos foram salvos:\nAntes de 4 de fevereiro:\n\nJogou {0} jogos (total {1} jogos)\nVenceu {2} jogos (antes {3}%, total {4} - {5}%)\nPerdeu {6} jogos ({7} no total)\nFoi o primeiro jogador {8} vezes ({9}% antes, {10} vezes no total - {11}%)\nFoi camaleão {12} vezes ({13}% antes, {14} vezes no total - {15}%)\n\nOs torneios não são afetados (contados separadamente), nem os jogos iniciados."
+# estatísticas do grupo
+group_stats: "Este grupo jogou {0} jogos ({2}º lugar de {3} grupos) e {1} torneios ({4}º lugar) \\o/"
+
