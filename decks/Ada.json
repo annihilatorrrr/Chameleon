@@ -1,0 +1,60 @@
+{
+    "name": "Monopoly Mobile",
+    "language": "Italiano",
+     "Azioni base + eventi": [
+        "Tirare dadi",
+        "Comprare proprietà",
+        "Pagare affitto",
+        "Passare via",
+        "Costruire casa",
+        "Costruire albergo",
+        "Fare scambio",
+        "Pagare tassa",
+        "Guadagnare soldi",
+        "Perdere soldi",
+        "Vai in prigione",
+        "Esci di prigione",
+        "Ricevi ricompensa",
+        "Paga multa",
+        "Avanza caselle",
+        "Arretra"
+],
+     
+       "Modalità e situazioni": [
+       "Giocare online",
+        "Sfida amici",
+        "Partita veloce",
+        "Modalità offline",
+        "Giocare contro bot",
+        "Evento multiplayer",
+        "Classifica",
+        "Torneo",
+        "Giocare in locale",
+        "Partita pubblica",
+        "Restare senza soldi",
+        "Fare bancarotta",
+        "Diventare ricco",
+        "Vincere partita",
+        "Perdere tutto",
+        "Dominare tabellone"
+],
+
+   "Elementi + carte avanzate": [
+        "Dadi",
+        "Pedina",
+        "Tabellone",
+        "Banconote",
+        "Proprietà",
+        "Casa",
+        "Albergo",
+        "Prigione",
+        "Carta fortuna",
+        "Carta probabilità",
+        "Bonus giornaliero",
+        "Evento speciale",
+        "Soffrire svantaggio",
+        "Pagare troppo affitto",
+        "Fare affare",
+        "Recuperare all'ultimo"
+      ]
+  }
